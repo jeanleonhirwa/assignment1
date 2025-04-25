@@ -1,0 +1,282 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+body{
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation nav{
+    background: white;
+    height: 94px;
+
+}
+
+.navigation nav p{
+    color: black;
+    margin-left: 44%;
+    font-size: 25px;
+    margin-top: -24px;
+}
+
+.logo{
+
+    margin-top: 23px;
+}
+
+.logo a{
+    font-size: 35px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 119px;
+    
+}
+
+.content h2{
+    color: white;
+    margin-left: 53px;
+    margin-top: 40px;
+}
+.line{
+    background-color: white;
+    height: 0.5vh;
+    margin-left: 38px;
+    margin-right: 38px;
+    border-radius: 3px;
+    margin-top: 9px;
+
+}
+
+body form{
+    display: flex;
+    flex-direction: column;
+    color:black;
+    width: 32vw;
+    height: 47vh;
+    border: 2px solid #00abf0;
+    margin-left: 33px;
+    padding: 12px 12px;
+    margin-top: 43px;
+    border-radius: 5px;
+}
+
+body form input {
+    height: 13px;
+    padding: 12px 12px ;
+    border-radius: 3px;
+    border: none;
+    margin-top: 23px;
+    background-color: #f6f4f4d8;
+    color: #00abf0;
+    font-size: 17px;
+    border: solid 1px black;
+}
+
+body form textarea{
+    background-color: #f6f4f4d8;
+    padding: 8px 8px ;
+    height: 76px;
+    color: black;
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+}
+ body form button{
+    height: 35px;
+    margin-top: 12px;
+    border-radius: 6px;
+    border: none;
+ }
+ body form button:hover{
+       transition: .9s;
+        cursor: pointer;
+        background-color: #07a4e2;
+        color: white;
+    
+ }
+ /*..........................footer........................... */
+
+
+footer {
+    background-color: rgb(3, 14, 21);
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: sticky; 
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
+.home-sci{
+    position: sticky;
+    margin-left: 44.5%;
+    margin-top: 15px;
+    bottom: 30px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px auto;
+}
+.home-sci a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-sci a:hover{
+    color: #081b29;
+}
+
+.home-sci a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #00abf0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+/* .......................footer end................................... */
+#posts-list {
+    margin: 20px 33px;
+    display: grid;
+    gap: 20px;
+}
+
+.post-item {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #00abf0;
+    color: black;
+}
+
+.post-item h3 {
+    color: #00abf0;
+    margin-bottom: 10px;
+}
+
+.post-item .date {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.post-item button {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.message {
+    padding: 10px;
+    margin: 10px 33px;
+    border-radius: 4px;
+}
+
+.message.success {
+    background: #2ecc71;
+    color: white;
+}
+
+.message.error {
+    background: #e74c3c;
+    color: white;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navigation nav p {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .logo a {
+        margin-left: 20px;
+    }
+
+    .content h2 {
+        margin-left: 20px;
+    }
+
+    body form {
+        width: 90%;
+        margin: 20px auto;
+        height: 10%;
+        min-height: 300px;
+    }
+
+    #posts-list {
+        margin: 20px;
+        grid-template-columns: 1fr;
+    }
+
+    .home-sci {
+        margin: 20px auto;
+        position: relative;
+        margin-top: 37px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navigation nav {
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .logo a {
+        font-size: 28px;
+    }
+
+    .navigation nav p {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    body form input,
+    body form textarea {
+        font-size: 16px;
+    
+    .post-item {
+        padding: 10px;
+    }
+
+    .message {
+        margin: 10px;
+    }
+}
+
+main {
+    flex: 1;
+}
+
+
+}
